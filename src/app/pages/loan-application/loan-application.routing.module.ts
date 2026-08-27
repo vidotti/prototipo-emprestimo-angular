@@ -4,7 +4,6 @@ import { LoanApplicationComponent } from './loan-application.component';
 import { SuccessPageComponent } from './success-page/success-page.component';
 
 const moviesRoutes: Routes = [
-
   {
     path: 'loan-application',
     children: [
