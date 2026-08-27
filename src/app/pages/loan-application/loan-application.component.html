@@ -1,10 +1,6 @@
 <section class="loan-section">
   <div class="grid">
-
-    <div class="col-2 row-2"></div>
-
     <div class="col-8">
-
       <mat-card class="loan-application">
         <mat-card-content>
           <h1>Formulário de Solicitação de Empréstimo</h1>
@@ -16,7 +12,6 @@
                 <mat-label>Nome do solicitante</mat-label>
                 <input maxlength="100" formControlName="name" matInput>
                 <mat-error class="mat-error">Campo obrigatório</mat-error>
-                <!-- <mat-hint>Hint</mat-hint> -->
               </mat-form-field>
             </div>
 
@@ -25,7 +20,6 @@
                 <mat-label>Valor desejado</mat-label>
                 <input maxlength="9" currencyMask [options]="{ align: 'left', prefix: 'R$ ', thousands: '.', decimal: ',' }" formControlName="value" matInput>
                 <mat-error class="mat-error">Campo obrigatório</mat-error>
-                <!-- <mat-hint>Hint</mat-hint> -->
               </mat-form-field>
             </div>
 
@@ -34,7 +28,6 @@
                 <mat-label>Número de parcelas</mat-label>
                 <input maxlength="3" formControlName="parcelNumber" matInput>
                 <mat-error class="mat-error">Campo obrigatório</mat-error>
-                <!-- <mat-hint>Hint</mat-hint> -->
               </mat-form-field>
             </div>
 
@@ -67,7 +60,6 @@
             (click)="openDialog()">Confirmar</button>
         </mat-card-content>
       </mat-card>
-
   </div>
   <div class="col-2 row-2"></div>
 
