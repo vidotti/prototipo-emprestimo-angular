@@ -17,14 +17,9 @@ import { LoanApplicationService } from './service/loan-application.service';
 export class LoanApplicationComponent implements OnInit {
 
   enableConfirmButton = false;
-
   hasLoading = false;
-
   simulatedLoan!: Loan;
-
   loanForm!: FormGroup;
-
-  animal!: string;
   name!: string;
 
   constructor(
@@ -46,9 +41,6 @@ export class LoanApplicationComponent implements OnInit {
       {
         data: { clientName: this.loanForm.get('name')?.value },
       });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    // });
   }
 
 
@@ -72,9 +64,9 @@ export class LoanApplicationComponent implements OnInit {
     }
 
     this.hasLoading = true;
+    
     this.mockService.mockSimulateLoan(params).subscribe({
       next: (simulatedLoan) => {
-        // console.log(simulatedLoan);
         this.hasLoading = false;
         this.simulatedLoan = simulatedLoan;
         this.setServiceLoanData(this.simulatedLoan);
